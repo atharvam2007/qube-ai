@@ -7,6 +7,7 @@ const HomePage = () => {
         <div className={styles.homepage}>
             <Navbar /> {/* Corrected the way you use the Navbar component */}
             <div className={styles.square}></div>
+                <p>Terre mu me gobeer</p>
             <div className={styles.square}></div>
         </div>
     );
