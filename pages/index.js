@@ -1,14 +1,15 @@
 import React from "react";
+import styles from './HomePage.module.scss';
+import Navbar from '../comps/Navbar';
 
-export default function Home() {
-    
+const HomePage = () => {
     return (
-        <div>
-            <h1>Home</h1>
-
-            <img src="https://cdn.vox-cdn.com/thumbor/Si2spWe-6jYnWh8roDPVRV7izC4=/0x0:1192x795/1400x788/filters:focal(596x398:597x399)/cdn.vox-cdn.com/uploads/chorus_asset/file/22312759/rickroll_4k.jpg"></img>
+        <div className={styles.homepage}>
+            <Navbar /> {/* Corrected the way you use the Navbar component */}
+            <div className={styles.square}></div>
+            <div className={styles.square}></div>
         </div>
     );
-
-
 }
+
+export default HomePage;

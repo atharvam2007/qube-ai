@@ -1,0 +1,29 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+    background-color: #f5f5f5;
+
+    &-brand {
+        margin: 0;
+    }
+
+    &-menu {
+        display: flex;
+        gap: 1em;
+
+        &-item {
+            text-decoration: none;
+            color: inherit;
+        }
+    }
+
+    @media (max-width: 600px) {
+        flex-direction: column;
+
+        &-menu {
+            margin-top: 1em;
+        }
+    }
+}
+
