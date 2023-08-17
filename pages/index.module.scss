@@ -1,3 +1,14 @@
+// index.module.scss
+
+// Font Families
+
+@font-face {
+    font-family: 'Drexs';
+    src: url('/fonts/drexs.otf') format('truetype');
+}
+
+
+// Homepage Styling
 .homepage {
     display: flex;
     justify-content: center;
@@ -18,6 +29,10 @@
 .h1 {
     text-align: left;
     font-size: 75px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     color: blue;
+    margin-top: 30px;
+    margin-left: 20px;
+    font-family: 'Drexs';
+    font-weight: bold;
 }
