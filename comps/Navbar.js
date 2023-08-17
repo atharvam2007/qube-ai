@@ -1,3 +1,5 @@
+// Navbar.js
+
 import Link from 'next/link';
 import styles from './Navbar.module.scss';
 

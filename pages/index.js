@@ -1,13 +1,17 @@
+// index.js
+
 import React from "react";
-import styles from './HomePage.module.scss';
+import styles from './index.module.scss';
 import Navbar from '../comps/Navbar';
 
 const HomePage = () => {
     return (
         <div className={styles.homepage}>
-            <Navbar /> {/* Corrected the way you use the Navbar component */}
-            <div className={styles.square}></div>
-                <p>Terre mu me gobeer</p>
+            <Navbar /> {/* Moved Navbar to the top */}
+            <div className={styles.square}>
+                <header className={styles.h1}>Qubes are not squares_</header>
+                <p>This is the future</p>
+            </div>
             <div className={styles.square}></div>
         </div>
     );
