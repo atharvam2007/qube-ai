@@ -18,7 +18,7 @@ const HomePage = () => {
                 if (currentTextLength === text.length) {
                     clearInterval(animationInterval);
                 }
-            }, 80); // Delay between each letter in milliseconds
+            }, 55); // Delay between each letter in milliseconds
 
             return () => clearInterval(animationInterval);
         }

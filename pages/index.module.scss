@@ -39,16 +39,15 @@
     font-weight: bold;
 }
 
-
 .blinkingUnderscore {
-    animation: blink 1s infinite;
+    animation: blink 0.5s infinite; /* Change the animation duration */
 }
 
 @keyframes blink {
     0%, 100% {
-        visibility: hidden;
+        opacity: 0; /* Change visibility to opacity for smoother animation */
     }
     50% {
-        visibility: visible;
+        opacity: 1;
     }
 }
