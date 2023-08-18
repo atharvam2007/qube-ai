@@ -3,7 +3,15 @@
 import React, { useEffect, useState } from "react";
 import styles from './index.module.scss';
 import Navbar from '../comps/Navbar';
+import dynamic from 'next/dynamic';
 
+
+// Import the SpinningCube component
+const DynamicSpinningCube = dynamic(() => import('../comps/SpinningCube'), {
+    ssr: false, // Disable server-side rendering for this component
+  });
+  
+// const HomePage
 const HomePage = () => {
     const [startAnimation, setStartAnimation] = useState(false);
     const [animationText, setAnimationText] = useState(""); // Initialize animationText
@@ -41,7 +49,10 @@ const HomePage = () => {
                 </header>
                 <p>This is the future</p>
             </div>
-            <div className={styles.square}></div>
+            <div className={styles.square} id="spinning-cube-container">
+                {/* Cube will be rendered here using useEffect */}
+                <DynamicSpinningCube />
+            </div>
         </div>
     );
 }
