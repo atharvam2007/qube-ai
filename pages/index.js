@@ -62,8 +62,9 @@ const HomePage = () => {
                     QUBE Foundation is a non-profit organization dedicated to fostering curiosity and knowledge in emerging technologies. Our mission is to empower students with a profound understanding of cutting-edge technology trends.   
                 </p>
                 <p className={styles.paragraph}>
-                    We firmly believe that "qubes are not squares," emphasizing that AI is a multi-faceted realm encompassing creativity, ethics, and innovation.
+                    We firmly believe that &quot;qubes are not squares,&quot; emphasizing that AI is a multi-faceted realm encompassing creativity, ethics, and innovation.
                 </p>
+
 
 
 
