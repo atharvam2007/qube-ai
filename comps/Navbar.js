@@ -11,6 +11,7 @@ const Navbar = () => {
             </Link>
 
             <div className={styles['navbar-menu']}>
+
                 <Link href="/about">
                     <div className={styles['navbar-item']}>About</div>
                 </Link>
@@ -18,6 +19,7 @@ const Navbar = () => {
                 <Link href="/contact">
                     <div className={styles['navbar-item']}>Contact</div>
                 </Link>
+                
             </div>
         </nav>
     );

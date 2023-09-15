@@ -5,16 +5,15 @@ import styles from './index.module.scss';
 import Navbar from '../comps/Navbar';
 import dynamic from 'next/dynamic';
 
-
 // Import the SpinningCube component
 const DynamicSpinningCube = dynamic(() => import('../comps/SpinningCube'), {
     ssr: false, // Disable server-side rendering for this component
-  });
-  
-// const HomePage
+});
+
+
 const HomePage = () => {
     const [startAnimation, setStartAnimation] = useState(false);
-    const [animationText, setAnimationText] = useState(""); // Initialize animationText
+    const [animationText, setAnimationText] = useState("");
     const text = "Qubes are not squares";
 
     useEffect(() => {
@@ -26,31 +25,51 @@ const HomePage = () => {
                 if (currentTextLength === text.length) {
                     clearInterval(animationInterval);
                 }
-            }, 55); // Delay between each letter in milliseconds
+            }, 55);
 
             return () => clearInterval(animationInterval);
         }
     }, [startAnimation, animationText, text]);
 
     useEffect(() => {
-        // Start the animation after a delay
         setTimeout(() => {
             setStartAnimation(true);
-        }, 1000); // Delay in milliseconds
+        }, 1000);
     }, []);
 
     return (
         <div className={styles.homepage}>
+        
+        {/* Removes the white border around website */}
+            <style jsx global>{`
+                body {
+                    margin: 0;
+                    padding: 0;
+                }
+            `}</style>
+            
             <Navbar />
+            
             <div className={styles.square}>
+                
+                {/* Titlte introduction */}
                 <header className={styles.h1}>
                     {animationText}
                     <span className={styles.blinkingUnderscore}>_</span>
                 </header>
-                <p>This is the future</p>
+
+                <p className={styles.paragraph}>
+                    QUBE Foundation is a non-profit organization dedicated to fostering curiosity and knowledge in emerging technologies. Our mission is to empower students with a profound understanding of cutting-edge technology trends.   
+                </p>
+                <p className={styles.paragraph}>
+                    We firmly believe that "qubes are not squares," emphasizing that AI is a multi-faceted realm encompassing creativity, ethics, and innovation.
+                </p>
+
+
+
             </div>
+
             <div className={styles.square} id="spinning-cube-container">
-                {/* Cube will be rendered here using useEffect */}
                 <DynamicSpinningCube />
             </div>
         </div>

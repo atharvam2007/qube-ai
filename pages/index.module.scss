@@ -1,5 +1,11 @@
 // index.module.scss
 
+// :global {
+//   body {
+//     margin: 0;
+//     padding: 0;
+//   }
+// }
 
 // Font Families
 @font-face {
@@ -7,21 +13,44 @@
     src: url('/fonts/drexs.otf') format('truetype');
 }
 
+@font-face {
+    font-family: 'Heebo';
+    src: url('/fonts/Heebo-Regular.ttf') format('truetype');
+}
+
+
 
 // Homepage Styling
+
 .homepage {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f0f0f0;
+    background: linear-gradient(to top, #1786d0, #a638d2);
+
+}
+
+.p {
+    font-family: 'Drexs';
+    
+    
+}
+
+.paragraph {
+    font-size: 15px;
+    font-family: 'Heebo';
+    font-style: normal;
+    font-weight: bold;
+    color: black;
 }
 
 .square {
     width: 600px;
     height: 600px;
     border-radius: 10%;
-    background-color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.387);
+    backdrop-filter: blur(10px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Shadow effect */
     margin: 0 20px;
     text-align: center; /* Add this line */
@@ -32,7 +61,7 @@
     text-align: left; /* Align text to the left */
     font-size: 75px;
     margin-bottom: 30px;
-    color: rgb(71, 123, 247);
+    color: rgb(0, 0, 0);
     margin-top: 30px;
     margin-left: 20px; /* Add margin to the left for spacing */
     font-family: 'Drexs';
